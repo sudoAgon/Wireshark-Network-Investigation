@@ -149,17 +149,18 @@ HTTP
 Exchange web data
 
 ICMP can be used separately to test connectivity.
+
 What I Learned:
 
 Through this project, I learned how to:
 
-Capture network traffic with Wireshark
-Use Wireshark filters
-Analyze DNS traffic
-Understand TCP SYN, SYN-ACK and ACK
-Analyze HTTP requests and responses
-Use ICMP to test connectivity
-Understand ARP
-Understand DHCP and the DORA process
-Identify source and destination IP addresses
-Analyze packets at different network layers
+- Capture network traffic with Wireshark
+- Use Wireshark filters
+- Analyze DNS traffic
+- Understand TCP SYN, SYN-ACK and ACK
+- Analyze HTTP requests and responses
+- Use ICMP to test connectivity
+- Understand ARP
+- Understand DHCP and the DORA process
+- Identify source and destination IP addresses
+- Analyze packets at different network layers
