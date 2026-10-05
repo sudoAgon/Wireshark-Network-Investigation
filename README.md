@@ -1,7 +1,8 @@
-A beginner network analysis project using Wireshark.
-I captured and analyzed different types of network traffic to understand how common network protocols work.
+# Wireshark Network Investigation
 
- -**Protocols Analyzed**
+A beginner network analysis project using Wireshark. I captured and analyzed different types of network traffic to understand how common network protocols work.
+
+## Protocols Analyzed
 
 - DNS
 - TCP
@@ -10,75 +11,83 @@ I captured and analyzed different types of network traffic to understand how com
 - ARP
 - DHCP
 
- **Tools**
+## Tools
+
 - Wireshark
 - Windows Command Prompt
 - Web Browser
 - Wi-Fi
 
-
- **1. DNS**
+## 1. DNS
 
 DNS translates domain names into IP addresses.
 
 I captured DNS traffic while making a DNS request.
 
-What I observed
+### What I Observed
 
 - DNS uses UDP port 53
 - I captured an A record query
 - The A record is used to find an IPv4 address
 - I identified the source and destination IP addresses
 
- Basic process
+### Basic Process
 
-**2. TCP Three-Way Handshake**
+- Client sends a DNS query
+- Resolver checks the domain name
+- Server returns the matching IP address
+- The client uses that IP address to connect
+
+## 2. TCP Three-Way Handshake
 
 TCP creates a connection using three packets:
 
 SYN -> SYN-ACK -> ACK
 
-What I observed:
-SYN starts the connection
-SYN-ACK is the server's response
-ACK confirms the connection
-After this, data can be exchanged
+### What I Observed
 
+- SYN starts the connection
+- SYN-ACK is the server's response
+- ACK confirms the connection
+- After this, data can be exchanged
 
-**3. HTTP**
+## 3. HTTP
 
 HTTP is used for communication between web browsers and web servers.
 
 I generated HTTP traffic by visiting:
-http://neverssl.com
 
-What I observed:
+- http://neverssl.com
+
+### What I Observed
 
 I captured an HTTP request such as:
 
+```text
 GET / HTTP/1.1
 Host: neverssl.com
+```
 
 I also observed HTTP response codes such as:
 
-200 OK
-301 Moved Permanently
+- 200 OK
+- 301 Moved Permanently
 
 HTTP commonly uses TCP port 80.
 
-Basic process:
+### Basic Process
+
 Browser -> HTTP Request -> Web Server -> HTTP Response
 
-
-**4. ICMP**
+## 4. ICMP
 
 ICMP is commonly used for network testing.
 
 I generated ICMP traffic using:
 
-ping 8.8.8.8
+- ping 8.8.8.8
 
-What I observed:
+### What I Observed
 
 The computer sent an ICMP Echo Request and received an Echo Reply.
 
@@ -86,71 +95,53 @@ Computer -> Echo Request -> 8.8.8.8 -> Echo Reply -> Computer
 
 This shows that the destination was reachable.
 
-
-
-**5. ARP**
+## 5. ARP
 
 ARP is used to find the MAC address associated with an IPv4 address on a local network.
 
-What I observed:
+### What I Observed
 
 The ARP process works like this:
-ARP Request:
-"Who has this IP?"
 
-ARP Reply:
-"This IP is at this MAC address."
+- ARP Request: "Who has this IP?"
+- ARP Reply: "This IP is at this MAC address."
 
 The request is broadcast on the local network.
 
-
-**6. DHCP**
+## 6. DHCP
 
 DHCP automatically provides network configuration to devices.
 
 It can provide:
 
-IP address
-Subnet mask
-Default gateway
-DNS server
-DHCP Process
+- IP address
+- Subnet mask
+- Default gateway
+- DNS server
+
+### DHCP Process
 
 DHCP commonly follows the DORA process:
 
 Discover -> Offer -> Request -> Acknowledgement
-  
-What I observed:
+
+### What I Observed
 
 I captured DHCP traffic while renewing my network configuration and observed the DHCP communication between the client and DHCP server.
 
-How These Protocols Work Together:
+## How These Protocols Work Together
 
 A simple example of accessing a website is:
 
-DHCP
- ↓
-Get network configuration
-
-ARP
- ↓
-Find local MAC address
-
-DNS
- ↓
-Find the server's IP address
-
-TCP
- ↓
-Establish connection
-
-HTTP
- ↓
-Exchange web data
+- DHCP → Get network configuration
+- ARP → Find local MAC address
+- DNS → Find the server's IP address
+- TCP → Establish connection
+- HTTP → Exchange web data
 
 ICMP can be used separately to test connectivity.
 
-What I Learned:
+## What I Learned
 
 Through this project, I learned how to:
 
