@@ -149,13 +149,11 @@ HTTP
 Exchange web data
 
 ICMP can be used separately to test connectivity.
-
-
 What I Learned:
 
 Through this project, I learned how to:
 
--Capture network traffic with Wireshark
+-\nCapture network traffic with Wireshark
 -Use Wireshark filters
 -Analyze DNS traffic
 -Understand TCP SYN, SYN-ACK and ACK
