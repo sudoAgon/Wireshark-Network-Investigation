@@ -1,10 +1,7 @@
-Wireshark Network Investigation
-
 A beginner network analysis project using Wireshark.
-
 I captured and analyzed different types of network traffic to understand how common network protocols work.
 
- -Protocols Analyzed
+ -**Protocols Analyzed**
 
 - DNS
 - TCP
@@ -13,15 +10,14 @@ I captured and analyzed different types of network traffic to understand how com
 - ARP
 - DHCP
 
- -Tools
-
+ **Tools**
 - Wireshark
 - Windows Command Prompt
 - Web Browser
 - Wi-Fi
 
 
- 1. DNS
+ **1. DNS**
 
 DNS translates domain names into IP addresses.
 
@@ -36,8 +32,7 @@ What I observed
 
  Basic process
 
-
-2. TCP Three-Way Handshake
+**2. TCP Three-Way Handshake**
 
 TCP creates a connection using three packets:
 
@@ -50,7 +45,7 @@ ACK confirms the connection
 After this, data can be exchanged
 
 
-3. HTTP
+**3. HTTP**
 
 HTTP is used for communication between web browsers and web servers.
 
@@ -75,7 +70,7 @@ Basic process:
 Browser -> HTTP Request -> Web Server -> HTTP Response
 
 
-4. ICMP
+**4. ICMP**
 
 ICMP is commonly used for network testing.
 
@@ -93,7 +88,7 @@ This shows that the destination was reachable.
 
 
 
-5. ARP
+**5. ARP**
 
 ARP is used to find the MAC address associated with an IPv4 address on a local network.
 
@@ -109,7 +104,7 @@ ARP Reply:
 The request is broadcast on the local network.
 
 
-6. DHCP
+**6. DHCP**
 
 DHCP automatically provides network configuration to devices.
 
@@ -128,7 +123,6 @@ Discover -> Offer -> Request -> Acknowledgement
 What I observed:
 
 I captured DHCP traffic while renewing my network configuration and observed the DHCP communication between the client and DHCP server.
-
 
 How These Protocols Work Together:
 
